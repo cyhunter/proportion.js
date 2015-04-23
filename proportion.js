@@ -40,8 +40,8 @@ var proportion = (function() {
     maxHeight = Math.min(screen.height, maxHeight || 1008);
     isLanscape = isLanscape || 0;
 
+
     if(isLanscape) {
-      maxWidth = [maxHeight, maxHeight = maxWidth][0];
       width = [height, height = width][0];
       marginLeft = [marginTop, marginTop = marginLeft][0];
     }
@@ -52,7 +52,7 @@ var proportion = (function() {
     el.style[width]= maxHeight * r + 'px';
     el.style[height] =  maxHeight + 'px';
     el.style[marginLeft] = - Math.min(maxWidth, maxHeight * r)/2 + 'px'; // 注意宽高变化
-    el.style[marginTop] = -(maxHeight / 2) + 'px';
+    el.style[marginTop] = - (maxHeight / 2) + 'px';
   };
 
 }());
